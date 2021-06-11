@@ -16,5 +16,12 @@ namespace Entities
         public DateTime LastUpdate { get; set; }
         [Required]
         public int PartialQuantity { get; set; }
+
+        public string ProductId { get; set; }
+        public ProductEntity Product { get; set; }
+
+        public string WarehouseId { get; set; }
+        public WarehouseEntity Warehouse { get; set; }
+        public ICollection<InputOutputEntity> InputOutputEntities { get; set; }
     }
 }

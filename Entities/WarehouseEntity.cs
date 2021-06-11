@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 
 namespace Entities
 {
-    public class WherehouseEntity
+    public class WarehouseEntity
     {
         [Key]
-        [StringLength(10)]
-        public string WherehouseId { get; set; }
+        [StringLength(100)]
+        public string WarehouseId { get; set; }
         [Required]
         [StringLength(100)]
-        public string WherehouseName { get; set; }
+        public string WarehouseName { get; set; }
         [Required]
         [StringLength(100)]
-        public string WherehouseAddress { get; set; }
+        public string WarehouseAddress { get; set; }
+
+        public ICollection<StorageEntity> Storages { get; set; }
     }
 }
